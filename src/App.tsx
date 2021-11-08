@@ -16,13 +16,14 @@ const App = () => {
   useEffect(() => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
+
   return (
     <C.Container>
       <C.Header>
         <C.HeaderText>Sistema Financeiro</C.HeaderText>
       </C.Header>
       <C.Body>
-        <TableArea />
+        <TableArea list={filteredList} />
       </C.Body>
     </C.Container>
   );
